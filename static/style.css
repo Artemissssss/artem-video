@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body {
+    background: url(./img/ukraine\ 1.png), #F2F2F2;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 76%, 100%;
+}
+
+.Name-Page {
+    width: 400px;
+    padding: 10% 0 0 0;
+    margin: auto;
+}
+
+h1,.name {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.form {
+    border-radius: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #DFDFDF;
+    width: 336px;
+    height: 412px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.name-form,
+.surname-form,.meet-form {
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 34px auto;
+    border: 1.9px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 0;
+    padding: 17px;
+    color: black;
+}
+
+.name-form-2,
+.surname-form-2,.meet-form {
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 34px auto;
+    border: 1.9px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 0;
+    padding: 17px;
+    color: black;
+}
+.name-form::placeholder,
+.surname-form::placeholder,.name-form-2::placeholder,
+.surname-form-2::placeholder,.meet-form::placeholder {
+    color: black;
+}
+.surname-form-2{
+    margin-top: 27px;
+}
+.surname-form,.meet-form {
+    margin-top: 27px;
+    margin-bottom: 34px;
+}
+
+.host-form {
+    width: 270px;
+    height: 50px;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+
+    text-align: center;
+    border: none;
+    color: #FFFFFF;
+    margin: 0 auto;
+    background: #000000;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.join-form{
+    width: 260px;
+    height: 50px;  
+    font-family: 'Comfortaa',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 22px;
+margin: 10px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.12);
+    border: 2px solid #000000;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.host-form:hover {
+    transform: scale(1.05);
+}
+.join-form:hover{
+    background-color: black;
+    border: none;
+}
+.form .unknown-form {
+    display: none
+}

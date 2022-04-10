@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Зустріч</title>
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://artemissssss.github.io/-------------------/favicon.svg">
+</head>
+
+<body>
+    <div class="Name-Page">
+        <div class="form">
+            <form class="known-form" action="/join">
+                <h1>Зустріч</h1>
+                <input type="text" class="name-form" placeholder="Ваше ім'я" name="name" />
+                <input type="text" class="surname-form" placeholder="Ваше прізвище" name="surname" />
+                <button class="host-form">Почати зустріч</button>
+                <p><a class="join-form" href="javascript:show()">Приєднатися</a></p>
+            </form>
+
+            <form class="unknown-form" action="/joinold">
+                <h2 class="name">Зустріч</h2>
+                <input type="text" class="name-form-2" placeholder="Ваше ім'я" name="name" />
+                <input type="text" class="surname-form-2" placeholder="Ваше прізвище" name="surname" />
+                
+                <input type="text" class="meet-form" placeholder="ID зустрічі" name="meeting_id" />
+                <button class="host-form">Приєднатися</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function show() {
+            $('form').animate({ height:"toggle",opacity:"toggle"},"slow")
+        }
+    </script>
+</body>
+
+</html>
