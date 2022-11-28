@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     color: inherit;
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
+}
+input{
+    caret-color: transparent;
 }
 body {
     background: url(./img/ukraine\ 1.png), #F2F2F2;
@@ -26,7 +29,9 @@ body {
     margin: auto;
 }
 
-h1,.name {
+h1,
+.name,
+.time-name {
     font-family: 'Comfortaa', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -36,22 +41,41 @@ h1,.name {
     margin-top: 25px;
 }
 
+.time-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33px;
+    margin-top: 0px;
+}
+
+.time-text {
+    display: inline-block;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+
+}
+
 .form {
     border-radius: 26px;
+    z-index: 1;
+    background-color: #DFDFDF;
+    width: 336px;
+    height: 556px;
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    background-color: #DFDFDF;
-    width: 336px;
-    height: 412px;
-    margin: 0 auto 100px;
-    text-align: center;
 }
 
 .name-form,
-.surname-form,.meet-form {
+.surname-form,
+.meet-form {
     background-color: transparent;
     width: 250px;
     height: 50px;
@@ -69,7 +93,8 @@ h1,.name {
 }
 
 .name-form-2,
-.surname-form-2,.meet-form {
+.surname-form-2,
+.meet-form {
     background-color: transparent;
     width: 250px;
     height: 50px;
@@ -85,15 +110,21 @@ h1,.name {
     padding: 17px;
     color: black;
 }
+
 .name-form::placeholder,
-.surname-form::placeholder,.name-form-2::placeholder,
-.surname-form-2::placeholder,.meet-form::placeholder {
+.surname-form::placeholder,
+.name-form-2::placeholder,
+.surname-form-2::placeholder,
+.meet-form::placeholder {
     color: black;
 }
-.surname-form-2{
+
+.surname-form-2 {
     margin-top: 27px;
 }
-.surname-form,.meet-form {
+
+.surname-form,
+.meet-form {
     margin-top: 27px;
     margin-bottom: 34px;
 }
@@ -117,19 +148,19 @@ h1,.name {
     transition: 0.5s;
 }
 
-.join-form{
+.join-form {
     width: 260px;
-    height: 50px;  
-    font-family: 'Comfortaa',sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 22px;
-margin: 10px auto;
-display: flex;
-justify-content: center;
-align-items: center;
-color: #FFFFFF;
+    height: 50px;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
     background: rgba(0, 0, 0, 0.12);
     border: 2px solid #000000;
     border-radius: 20px;
@@ -139,10 +170,234 @@ color: #FFFFFF;
 .host-form:hover {
     transform: scale(1.05);
 }
-.join-form:hover{
+
+.join-form:hover {
     background-color: black;
     border: none;
 }
+
 .form .unknown-form {
     display: none
+}
+
+label:nth-of-type(1) {
+    margin-bottom: 20px;
+}
+
+label:nth-of-type(2) {
+    margin-bottom: 20px;
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 6px solid #000000;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.custom-radio:not(:disabled):active+label::before {
+    background-color: #F2F2F2;
+    border-color: #000000;
+}
+
+.custom-radio:checked+label::before {
+    border-color: #000000;
+    background-image: url('https://artemissssss.github.io/-------------------/img/Ellipse%2016.png');
+    background-size: 80%;
+}
+
+.custom-radio:disabled+label::before {
+    background-color: #000000;
+}
+
+.style-time {
+    background-color: #00000000;
+    border: none;
+    color: black;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+
+input:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.container {
+    width: 250px;
+    margin: 20px auto 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.tyme-cor {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.tyme-cor::placeholder {
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.tyme-cor-val {
+    border: none;
+    font-family: 'Comfortaa', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+    background: none;
+    border: none;
+}
+
+.tyme-cor-val::after {
+    width: 10px;
+    height: 6px;
+    background: url(./img/Group\ 5.svg);
+    position: absolute;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    content: '';
+    display: block;
+    transition: .2s ease-in;
+}
+.tyme-cor-val {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: url(./img/Group\ 5.svg) no-repeat right center;
+    outline: 0;
+    padding-right: 20px;
+}
+
+option {
+    background-color: #E5E5E5;
+}
+
+
+@media(max-width:1199px) {
+    body {
+        background: url(./img/ukraine\ 1.png), #F2F2F2;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%, 100%;
+    }
+
+}
+
+@media(max-width:699px) {
+    @media(min-height: 600px) {
+        body {
+            background: #F2F2F2;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100%;
+        }
+    }
+
+    @media(max-height: 599px) {
+        body {
+            background: #F2F2F2;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 100%;
+        }
+
+        .form {
+            width: 564px;
+            height: 306px;
+        }
+        .form-list{
+            margin:  0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 564px;
+            height: 306px;
+        }
+        .form-item{
+            width: 50%;
+        }
+        .form-item:nth-of-type(3){
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .time-name, h1{
+            margin-top: 15px;
+        }
+        .container{
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+        label:nth-of-type(1){
+            margin-bottom: 45px;
+        }
+        .join-form{
+            margin: 0;
+        }
+        .surname-form{
+            margin-bottom: 0px;
+        }
+        .host-form{
+            margin: 0;
+        }
+    }
 }

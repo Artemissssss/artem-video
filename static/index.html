@@ -9,32 +9,81 @@
     <link rel="stylesheet" href="public/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="https://artemissssss.github.io/-------------------/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="Name-Page">
         <div class="form">
             <form class="known-form" action="/join">
-                <h1>Зустріч</h1>
-                <input type="text" class="name-form" placeholder="Ваше ім'я" name="name" />
-                <input type="text" class="surname-form" placeholder="Ваше прізвище" name="surname" />
-                <button class="host-form">Почати зустріч</button>
-                <p><a class="join-form" href="javascript:show()">Приєднатися</a></p>
+                <ul class="form-list">
+                    <li class="form-item">
+
+                        <h1>Зустріч</h1>
+                        <input type="text" class="name-form" placeholder="Ваше ім'я" name="name" required />
+                        <input type="text" class="surname-form" placeholder="Ваше прізвище" name="surname" required />
+                    </li>
+                    <li class="form-item">
+                        <h2 class="name time-name">Час</h2>
+                        <div class="container">
+                            <input type="radio" id="time-from-to" name="time-choise" class="custom-radio" required>
+                            <label for="time-from-to">
+                                <input type="time" id="appt" name="from" class="style-time">
+                                <p class="time-text">до⠀</p>
+                                <input type="time" id="appt" name="to" class="style-time">
+                            </label><br>
+
+                            <input type="radio" id="time" name="time-choise" class="custom-radio">
+                            <label for="time">
+                                <input type="number" name="time-cor" min="1" max="99" placeholder="--" class="tyme-cor" autocomplete="off">
+                                <select name="time" class="tyme-cor-val">
+                                    <option value="хв">хв</option>
+                                    <option value="год">год</option>
+                                </select>
+                            </label><br>
+                        </div>
+                    </li>
+                    <li class="form-item">
+
+                        <button class="host-form">Почати зустріч</button>
+                        <p><a class="join-form" href="javascript:show()">Приєднатися</a></p>
+                    </li>
+                </ul>
             </form>
 
             <form class="unknown-form" action="/joinold">
                 <h2 class="name">Зустріч</h2>
-                <input type="text" class="name-form-2" placeholder="Ваше ім'я" name="name" />
-                <input type="text" class="surname-form-2" placeholder="Ваше прізвище" name="surname" />
-                
-                <input type="text" class="meet-form" placeholder="ID зустрічі" name="meeting_id" />
+                <input type="text" class="name-form-2" placeholder="Ваше ім'я" name="name" required />
+                <input type="text" class="surname-form-2" placeholder="Ваше прізвище" name="surname" required />
+                <input type="text" class="meet-form" placeholder="ID зустрічі" name="meeting_id" required />
                 <button class="host-form">Приєднатися</button>
             </form>
         </div>
     </div>
     <script>
         function show() {
-            $('form').animate({ height:"toggle",opacity:"toggle"},"slow")
+            if (window.height < 649 && window.width < 1200) {
+                $('form').animate({
+                    height: "toggle",
+                    opacity: "toggle",
+                    height: "306px"
+                }, "slow")
+                $('.form').animate({
+                    height: "306px"
+                }, "slow")
+            } else {
+                $('form').animate({
+                    height: "toggle",
+                    opacity: "toggle",
+                    height: "412px"
+                }, "slow")
+                $('.form').animate({
+                    height: "412px"
+                }, "slow")
+            }
         }
     </script>
 </body>
