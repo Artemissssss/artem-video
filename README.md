@@ -473,3 +473,4 @@ npm i
 ```
 
 ## Код для ознайомлення
+## https://artem-video.onrender.com посилання на сервер
