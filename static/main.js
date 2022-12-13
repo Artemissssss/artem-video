@@ -1,6 +1,6 @@
-if (window.location.href == "https://artem-video.herokuapp.com/join/" + roomId || window.location.href == "https://artem-video.herokuapp.com/join/" + roomId + "?" || window.location.href.includes("https://artem-video.herokuapp.com/join/4e670315-0c19-427e-bfe8-2001d3b828e9?name=&surname=")) {
+if (window.location.href == "https://artem-video.vercel.app/join/" + roomId || window.location.href == "https://artem-video.vercel.app/join/" + roomId + "?" || window.location.href.includes("https://artem-video.vercel.app/join/4e670315-0c19-427e-bfe8-2001d3b828e9?name=&surname=")) {
     document.getElementById("form").style.display = "inline-block";
-    document.getElementById("back").style.display = "inline-block"
+    document.getElementById("back").style.display = "inline-block";
     document.getElementById("id-meet").value = "/join/" + roomId;
 }
     const socket = io("/");
@@ -21,7 +21,7 @@ if (window.location.href == "https://artem-video.herokuapp.com/join/" + roomId |
     var peer = new Peer(undefined, {
         path: "/peerjs",
         host: "/",
-        port: "3030",
+        port: "",
     });
     let myVideoStream;
     const peers = {};
