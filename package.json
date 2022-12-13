@@ -1,7 +1,6 @@
 {
     "name": "zoom-clone-2.0",
     "version": "1.0.0",
-    "homepage":"https://zustrich.netlify.app",
     "description": "",
     "main": "server.js",
     "scripts": {
