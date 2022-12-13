@@ -21,7 +21,7 @@ if (window.location.href == "https://artem-video.vercel.app/join/" + roomId || w
     var peer = new Peer(undefined, {
         path: "/peerjs",
         host: "/",
-        port: "3030",
+        port: "",
     });
     let myVideoStream;
     const peers = {};
