@@ -21,7 +21,7 @@ if (window.location.href == "https://artem-video.herokuapp.com/join/" + roomId |
     var peer = new Peer(undefined, {
         path: "/peerjs",
         host: "/",
-        port: "",
+        port: "3030",
     });
     let myVideoStream;
     const peers = {};
