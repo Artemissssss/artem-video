@@ -435,41 +435,11 @@ if (window.location.href == "http://localhost:3030/join/" + roomId || window.loc
 
 ```
 ## Запуск
-Потрібно записати в консоль:
-```sh
-npm start
-```
-Та потім відкрити http://localhost:3030
-
-## Можливі помилки та їх усунення
-ㅤ
-```sh
-node:internal/modules/cjs/loader:988
-  throw err;
-  ^
-
-Error: Cannot find module 'express'
-Require stack:
-- D:\artem-video-main\server.js
-    at Module._resolveFilename (node:internal/modules/cjs/loader:985:15)
-    at Module._load (node:internal/modules/cjs/loader:833:27)
-    at Module.require (node:internal/modules/cjs/loader:1051:19)
-    at require (node:internal/modules/cjs/helpers:103:18)
-    at Object.<anonymous> (D:\artem-video-main\server.js:1:17)
-    at Module._compile (node:internal/modules/cjs/loader:1149:14)
-    at Module._extensions..js (node:internal/modules/cjs/loader:1203:10)
-    at Module.load (node:internal/modules/cjs/loader:1027:32)
-    at Module._load (node:internal/modules/cjs/loader:868:12)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [ 'D:\\artem-video-main\\server.js' ]
-}
-
-Node.js v18.10.0
-```
 Для усунення просто вписати в консоль:
 ```sh
 npm i
 ```
-
-## Код для ознайомлення
+```sh
+npm start
+```
+Та відкрити http://localhost:3030/
