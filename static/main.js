@@ -1,4 +1,4 @@
-if (window.location.href == "https://artem-video.vercel.app/join/" + roomId || window.location.href == "https://artem-video.vercel.app/join/" + roomId + "?" || window.location.href.includes("https://artem-video.vercel.app/join/4e670315-0c19-427e-bfe8-2001d3b828e9?name=&surname=")) {
+if (window.location.href == "https://artem-video.onrender.com/join/" + roomId || window.location.href == "https://artem-video.onrender.com/join/" + roomId + "?" || window.location.href.includes("https://artem-video.onrender.com/join/4e670315-0c19-427e-bfe8-2001d3b828e9?name=&surname=")) {
     document.getElementById("form").style.display = "inline-block";
     document.getElementById("back").style.display = "inline-block";
     document.getElementById("id-meet").value = "/join/" + roomId;
@@ -347,5 +347,5 @@ if (window.location.href == "https://artem-video.vercel.app/join/" + roomId || w
     })
     document.getElementById("id-conference").addEventListener("dblclick", () => {
         // copyToClipboard("https://artem-video.herokuapp.com/join/"+roomId)
-        copyToClipboard(`Посилання, щоб долучитися до конференції у зустрічі:\nВи можете зайти нас сайт https://artem-video.herokuapp.com/ та долучитися, за допомогою Id зустрічі /join/${roomId}.\nАбо перейдіть за посиланням https://artem-video.herokuapp.com/join/${roomId}.`)
+        copyToClipboard(`Посилання, щоб долучитися до конференції у зустрічі:\nВи можете зайти нас сайт https://artem-video.onrender.com/ та долучитися, за допомогою Id зустрічі /join/${roomId}.\nАбо перейдіть за посиланням https://artem-video.onrender.com/join/${roomId}.`)
     })
