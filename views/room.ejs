@@ -146,6 +146,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
         import { getDatabase, set, ref ,push, child, onValue, remove} from
         "https://www.gstatic.com/firebasejs/9.6.2/firebase-database.js";
+        
         const firebaseConfig = {
   apiKey: "AIzaSyCkVb4Sci_kZUdGouDPo1eY3HCHLOWfzqY",
   authDomain: "zustrich-be18b.firebaseapp.com",
@@ -177,9 +178,13 @@
                 });
 
                 let sumSec = () =>{
-                return (((parseInt(time().split("-")[1].split(":")[0])*3600)+(parseInt(time().split(":")[2])*60))-((parseInt(time().split(":")[0])*3600)+(parseInt(time().split("-")[0].split(":")[1])*60)));
-            }
-            document.getElementById("timer").textContent = `Очікуваний кінець зустрічі о ${time().split("-")[1]}`;
+                    if(time.split("-").join("")[0] != `${new Date().getHours()}:${new Date().getMinutes()}`){
+                        console.log(`${new Date().getHours()}:${new Date().getMinutes()}-${time.split("-")[1]}`)
+                        time = `${new Date().getHours()}:${new Date().getMinutes()}-${time.split("-")[1]}`
+                    }
+                    return (((parseInt(time.split("-")[1].split(":")[0])*3600)+(parseInt(time.split(":")[2])*60))-((parseInt(time.split(":")[0])*3600)+(parseInt(time.split("-")[0].split(":")[1])*60)));
+                }
+             document.getElementById("timer").textContent = `Очікуваний кінець зустрічі о ${time.split("-")[1]}`;
             let widthCount = 100;
             let munisNum = 100/sumSec();
             let interval;
@@ -188,6 +193,7 @@
                 widthCount = widthCount-munisNum;
                 document.getElementById("bar").style.width = `${widthCount}%`
                 oi+=1;
+                console.log(oi)
                 if(oi==sumSec()){
                     document.getElementById("bar").style.width = `100%`;
                     document.getElementById("timer").style.color = "#FB1717";
@@ -195,7 +201,7 @@
                     clearInterval(interval);
                 }
             },1000);
-
+            
             }
         });
         if (fy == 0) {
