@@ -10,7 +10,8 @@ const peerServer = ExpressPeerServer(server, {
 });
 const path = require("path");
 const { config } = require("process");
-const PORT =process.env.PORT || config.get('serverPort');
+const PORT =process.env.PORT  || 3030
+//|| config.get('serverPort');
 app.set("view engine", "ejs");
 app.use("/public", express.static(path.join(__dirname, "static")));
 app.use("/peerjs", peerServer);
@@ -36,7 +37,9 @@ app.get("/joinold", (req, res) => {
         })
     );
 });
-
+app.get("/api/sleep", (req, res) => {
+    res.status(200).json({ok:true})
+});
 app.get("/join/:rooms", (req, res) => {
     res.render("room", { roomid: req.params.rooms, Myname: req.query.name });
 });
@@ -62,4 +65,6 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(process.env.PORT || config.get('serverPort'));
+server.listen(process.env.PORT || 3030
+ //   || config.get('serverPort')
+    );
