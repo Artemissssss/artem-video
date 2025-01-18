@@ -3,8 +3,9 @@ if (window.location.href == "https://zustrich.artemissssss.de/join/" + roomId ||
     document.getElementById("back").style.display = "inline-block"
     document.getElementById("id-meet").value = "/join/" + roomId;
 }
-    const socket = io("/");
-    const main__chat__window = document.getElementById("main__chat_window");
+const socket = io('wss://zustrich.artemissssss.de', {
+    transports: ['websocket']
+  });    const main__chat__window = document.getElementById("main__chat_window");
     const videoGrids = document.getElementById("video-grids");
     const myVideo = document.createElement("video");
     const chat = document.getElementById("chat");
